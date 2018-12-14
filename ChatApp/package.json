@@ -1,0 +1,39 @@
+{
+  "name": "ChatApp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "buildandroid": "cd android && ./gradlew clean && ./gradlew assembleRelease",
+    "createIconFont": "./node_modules/.bin/generate-icon ./src/assets/img/customFont/styles.css --componentName=dana-queue  --prefix=icon- --fontFamily=dana-queue > ./node_modules/react-native-vector-icons/dana-queue.js && cp ./src/assets/img/customFont/dana-queue.ttf ./node_modules/react-native-vector-icons/Fonts/dana-queue.ttf",
+    "fix-xcode": "react-native-schemes-manager all"
+  },
+  "dependencies": {
+    "@shoutem/ui": "^0.23.9",
+    "firebase": "^5.7.0",
+    "moment": "^2.23.0",
+    "react": "^16.3.0-alpha.1",
+    "react-native": "0.57.0",
+    "react-native-device-info": "^0.10.1",
+    "react-native-fcm": "^6.2.0",
+    "react-native-keyboard-aware-scroll-view": "^0.8.0",
+    "react-native-vector-icons": "^6.1.0",
+    "react-redux": "^5.0.3",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
+  },
+  "devDependencies": {
+    "babel-jest": "19.0.0",
+    "jest": "19.0.2",
+    "metro-react-native-babel-preset": "^0.48.5",
+    "react-test-renderer": "15.4.2",
+    "schedule": "^0.4.0"
+  },
+  "jest": {
+    "presets": [
+      "module:metro-react-native-babel-preset"
+    ]
+  }
+}
